@@ -1,0 +1,24 @@
+Segue um modelo de newsletter, de um cliente fictício.
+Precisamos deixar essa template dinâmica, para que o cliente possa ele mesmo cadastrar as notícias que serão enviadas semanalmente para os clientes dele.
+O mailing deverá estar cadastrado no banco de dados e, através de um link, ele irá selecionar as notícias que serão enviadas para os emails cadastrados.
+O modelo html está pronto (em anexo), mas deverá ser customizado conforme orientação abaixo.
+
+As seguintes tarefas fazem parte deste teste:
+
+1. Criação e programação da interface do formulário de CRUD (Para popular a tabela de notícias. Não será avaliado design da interface, apenas o código)
+
+2. Modelagem do banco de dados (entregar arquivo .sql)
+
+3. Programação da rotina de envio da newsletter (Ao clicar em enviar, as seguintes rotinas devem ser previstas:)
+
+1º seleção das notícias que irão compor o layout ( 5 notícias)
+2º seleção dos emails que irão receber a newsletter
+3º envio para os emails selecionados.
+
+Observações:
+- o layout preve 3 notícias mas neste quero que sejam apresentadas 5 noticias no modelo.
+- o cadastro de noticias deve prever foto em cada uma delas (campo opcional). Mas no modelo que será enviado devem ser 3 noticias com foto e duas sem
+- o nome do cliente deve ser consultado no banco de dados e mostrado no email
+
+Os arquivos do teste (php + sql) deverão ser enviados ao email monica@comparte.com.br
+A ferramenta de email deverá ser testada online e enviar o email da newsletter (com as 5 notícias) também para o email monica@comparte.com.br com o assunto "Teste Programador - nome do candidato"
