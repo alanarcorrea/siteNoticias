@@ -3,11 +3,14 @@
 $host = "localhost";
 $usuario = "root";
 $senha = "";
-$bd = "test";
+$bd = "newsletter";
 
-$mysqli = new mysqli($host, $usuario, $senha, $bd);
+$conn = mysqli_connect($host, $usuario, $senha, $bd);
 
-if($mysqli -> connect_errno)
-	echo "Conection Fail : (". $mysqli->connect_errno.") ".$mysqli->connect_error; 
+if(!$conn){
+	die("Falha na conexão: " . mysqli_connect_error());
+}else{
+	echo "Conexao realizada com sucesso";
+}
 
 ?>

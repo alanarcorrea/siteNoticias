@@ -160,17 +160,20 @@
                                 
                                 
                                 <!-- START RIGHT COLUMN -->
+                                
+                                <td valign="top" width="438" align="left">
 
                                 <!-- INICIO DO FOR NOTICIAS-->
-                                <td valign="top" width="438" align="left">
+                                
                                 	<table cellpadding="0" cellspacing="0" border="0" width="438">
                                     	
-
+                                         <!-- IMAGEM DA NOTICIA-->
                                         
                                         <tr>
                                         	<td colspan="3"><img src="img_azure_left/contentt.gif" width="438" height="9" style="display: block;"></td>
                                         </tr>
                                         
+                                        <!-- NOTICIA-->
 
                                         <tr>
                                         	<td width="28"></td>
@@ -181,7 +184,8 @@
                                             </td>
                                             <td width="15"></td>
                                         </tr>
-                                        
+                                            
+                                            <!-- DIVISAO DAS NOTICIAS-->
 
                                         <tr>
                                         	<td width="28"></td>
