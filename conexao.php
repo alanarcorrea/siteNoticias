@@ -1,11 +1,11 @@
 <?php
 
 $host = "localhost";
-$usuario = "root";
-$senha = "";
+$user = "root";
+$password = "";
 $bd = "newsletter";
 
-$conn = mysqli_connect($host, $usuario, $senha, $bd);
+$conn = mysqli_connect($host, $user, $password, $bd);
 
 if(!$conn){
 	die("Falha na conexão: " . mysqli_connect_error());

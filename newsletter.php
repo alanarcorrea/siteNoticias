@@ -162,74 +162,35 @@
                                 <!-- START RIGHT COLUMN -->
                                 
                                 <td valign="top" width="438" align="left">
-
-                                <!-- INICIO DO FOR NOTICIAS-->
-                                
                                 	<table cellpadding="0" cellspacing="0" border="0" width="438">
                                     	
-                                         <!-- IMAGEM DA NOTICIA-->
-                                        
-                                        <tr>
-                                        	<td colspan="3"><img src="img_azure_left/contentt.gif" width="438" height="9" style="display: block;"></td>
+                                         <?php 
+                                         $sql = "SELECT * FROM news";
+                                         $records = mysqli_query($conn, $sql);
+
+                                         while($news=mysqli_fetch_assoc($records)) { 
+                                            if($news['photo'] != "NULL") { ?>
+
+                                         <tr>
+                                            <td colspan="3"><img src="img_azure_left/contentt.gif" width="438" height="9" style="display: block;"></td>
                                         </tr>
-                                        
-                                        <!-- NOTICIA-->
 
                                         <tr>
-                                        	<td width="28"></td>
-                                        	<td width="395">
-                                                <span style="font-family:Arial, Helvetica, sans-serif; font-size:24px; color:#006699; line-height:60px; letter-spacing:-1px;"><a name="one" style="color:#006699"><strong>Noticia 1</strong></a></span><br />
+                                            <td width="28"></td>
+                                            <td width="395">
+                                                <span style="font-family:Arial, Helvetica, sans-serif; font-size:24px; color:#006699; line-height:60px; letter-spacing:-1px;"><a name="one" style="color:#006699"><strong> <?= $news['title'] ?></strong></a></span><br />
                                                 <span style="font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#666666; line-height:18px;">
-                                                <img src="img_azure_left/1.jpg" width="145" height="145" align="left" style="padding: 0 18px 20px 0;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat voclutpat. Ut wisi enim ad minim veniam, quis nostrud exercimagna.<br /><br /><a href="link" style="color:#00BDEE;">Link this to one of your website pages</a><br /><br /></span>
+                                                <img src="img_azure_left/1.jpg" width="145" height="145" align="left" style="padding: 0 18px 20px 0;"><?= $news['description'] ?><br /><br /><a href="link" style="color:#00BDEE;">Link this to one of your website pages</a><br /><br /></span>
                                             </td>
                                             <td width="15"></td>
                                         </tr>
-                                            
-                                            <!-- DIVISAO DAS NOTICIAS-->
 
                                         <tr>
-                                        	<td width="28"></td>
-                                       	  	<td colspan="2" height="20"><img src="img_azure_left/div_wide.gif" width="410" height="9" style="display: block;"></td>
-                                            
+                                            <td width="28"></td>
+                                            <td colspan="2" height="20"><img src="img_azure_left/div_wide.gif" width="410" height="9" style="display: block;"></td>
                                         </tr>
-                                        
 
-                                        <tr>
-                                        	<td width="28"></td>
-                                        	<td width="395">
-                                                <span style="font-family:Arial, Helvetica, sans-serif; font-size:24px; color:#006699; line-height:60px; letter-spacing:-1px;"><a name="two" style="color:#006699;"><strong>Noticia 2</strong></a></span><br />
-                                                <span style="font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#666666; line-height:18px;">
-                                                <img src="img_azure_left/2.jpg" width="145" height="145" align="left" style="padding: 0 18px 20px 0;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat voclutpat. Ut wisi enim ad minim veniam, quis nostrud exercimt.<br /><br /><a href="link" style="color:#00BDEE;">Link this to one of your website pages</a><br /><br /></span>
-                                           </td>
-                                           <td width="15"></td>
-                                        </tr>
-                                        
-
-                                        <tr>
-                                        	<td width="28"></td>
-                                       	  	<td colspan="2" height="20"><img src="img_azure_left/div_wide.gif" width="410" height="9" style="display: block;"></td>
-                                        </tr>
-                                        
-
-                                        <tr>
-                                        	<td width="28"></td>
-                                        	<td width="395">
-                                                <span style="font-family:Arial, Helvetica, sans-serif; font-size:24px; color:#006699; line-height:60px;letter-spacing:-1px;"><a name="three" style="color:#006699;"><strong>Noticia 3</strong></a></span><br />
-                                                <span style="font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#666666; line-height:18px;">
-                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat voclutpat. Ut wisi enim ad minim veniam, quis nostrud exercimagna aliquam erat volutpat.<br /><br /></span>
-                                                
-                                           </td>
-                                           <td width="15"></td>
-                                        </tr>
-                                        
-
-                                        <tr>
-                                        	<td width="28"></td>
-                                       	  	<td colspan="2" height="20"><img src="img_azure_left/div_wide.gif" width="410" height="9" style="display: block;"></td>
-                                            
-                                        </tr>
-                                        
-
+                                         <?php }} ?>
                                     </table>
                                 </td>
                                 
