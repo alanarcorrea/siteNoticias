@@ -31,6 +31,7 @@ require_once "conexao.php";
         </div>
 
         <input type="submit" name="cad" value="Cadastrar">
+        <a href="newsletter.php">Voltar</a>
  </form>
 </div>
 

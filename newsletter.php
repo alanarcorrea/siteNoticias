@@ -5,7 +5,7 @@
 <html>
 <head>
 <title>Teste PHP - Email marketing</title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" charset="utf-8">
 
 </head>
 	
@@ -29,7 +29,13 @@
                       <!-- begin MASTHEAD -->
                       <table width="650" cellpadding="0" cellspacing="0" border="0">
                         <tr>
-                          <td bgcolor="#00BDEE" height="25" align="right"><span style="font-family:Arial, Helvetica, sans-serif; font-size:11px; padding: 0px 17px 0 0; color:#FFFFFF;">View in a browser ></span></td>
+                          <td bgcolor="#00BDEE" height="25" align="right"><span style="font-family:Arial, Helvetica, sans-serif; font-size:11px; padding: 0px 17px 0 0; color:#FFFFFF;">View in a browser </span></td>
+                        </tr>
+                        <tr>
+                          <td bgcolor="#00BDEE" height="25" align="right"><span style="font-family:Arial, Helvetica, sans-serif; font-size:11px; padding: 0px 17px 0 0; color:#FFFFFF;"><a href="form-cad-news.php">Cadastrar Notícia</a> </span></td>
+                        </tr>
+                        <tr>
+                          <td bgcolor="#00BDEE" height="25" align="right"><span style="font-family:Arial, Helvetica, sans-serif; font-size:11px; padding: 0px 17px 0 0; color:#FFFFFF;"><a href="form-mail.php">Enviar Email</a> </span></td>
                         </tr>
                         <tr>
                         	<td bgcolor="#00BDEE">
@@ -185,12 +191,25 @@
                                             <td width="15"></td>
                                         </tr>
 
-                                        <tr>
+                                         <?php }else{ ?>
+
+                                            <tr>
+                                            <td width="28"></td>
+                                            <td width="395">
+                                                <span style="font-family:Arial, Helvetica, sans-serif; font-size:24px; color:#006699; line-height:60px;letter-spacing:-1px;"><a name="three" style="color:#006699;"><strong><?= $news['title'] ?></strong></a></span><br />
+                                                <span style="font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#666666; line-height:18px;"><?= $news['description'] ?><br /><br /></span>
+                                                
+                                           </td>
+                                           <td width="15"></td>
+                                        </tr>
+                                         <?php  } ?>
+
+                                          <tr>
                                             <td width="28"></td>
                                             <td colspan="2" height="20"><img src="img_azure_left/div_wide.gif" width="410" height="9" style="display: block;"></td>
                                         </tr>
 
-                                         <?php }} ?>
+                                        <?php } ?>
                                     </table>
                                 </td>
                                 
