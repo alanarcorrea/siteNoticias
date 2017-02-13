@@ -12,7 +12,7 @@ require_once "conexao.php";
 <div class="container">
     <h3> Cadastro de Notícias </h3>
     
-<form method="post" action="cadastrar.php">
+<form method="post" enctype="multipart/form-data" action="cadastrar.php">
         <div class="form-group">
             <label for="title">Título: </label>
             <input type="text" class="form-control" id="title"

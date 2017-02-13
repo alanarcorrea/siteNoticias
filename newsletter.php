@@ -177,16 +177,15 @@
                                          while($news=mysqli_fetch_assoc($records)) { 
                                             if($news['photo'] != "NULL") { ?>
 
-                                         <tr>
-                                            <td colspan="3"><img src="img_azure_left/contentt.gif" width="438" height="9" style="display: block;"></td>
-                                        </tr>
+                                         
+                                         
 
                                         <tr>
                                             <td width="28"></td>
                                             <td width="395">
                                                 <span style="font-family:Arial, Helvetica, sans-serif; font-size:24px; color:#006699; line-height:60px; letter-spacing:-1px;"><a name="one" style="color:#006699"><strong> <?= $news['title'] ?></strong></a></span><br />
                                                 <span style="font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#666666; line-height:18px;">
-                                                <img src="img_azure_left/1.jpg" width="145" height="145" align="left" style="padding: 0 18px 20px 0;"><?= $news['description'] ?><br /><br /><a href="link" style="color:#00BDEE;">Link this to one of your website pages</a><br /><br /></span>
+                                                <img src="<?= 'uploads/'.$news['photo'] ?>" width="145" height="145" align="left" style="padding: 0 18px 20px 0;"><?= $news['description'] ?><br /><br /><a href="link" style="color:#00BDEE;">Link this to one of your website pages</a><br /><br /></span>
                                             </td>
                                             <td width="15"></td>
                                         </tr>
