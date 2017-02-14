@@ -33,16 +33,20 @@ if ( isset( $photo ) && $_FILES[ 'photo' ][ 'error' ] == 0 ) {
     }
     else
         echo 'Você poderá enviar apenas arquivos "*.jpg;*.jpeg;*.gif;*.png"<br />';
-}
-else{
+}else{
 	$photo = "NULL";
 	$query1 = mysqli_num_rows(mysqli_query($conn, "SELECT * FROM NEWS WHERE TITLE = '$title'"));
 	
 		if($query1 == 1){
-			echo "<script>alert('Título desta notícia já existe!); </script>";
+			echo 'Título desta notícia já existe! <br>';
 		}else{
 			$query2 = "INSERT INTO news (title, photo, description) VALUES ('$title', '$photo', '$description')";
 			mysqli_query($conn,$query2 );
-			echo "<script>alert('Notícia cadastrada com sucesso!);</script>";
+			echo 'Notícia cadastrada com sucesso! <br>';
 		}
 };
+
+?>
+<a href="newsletter.php">Voltar</a>
+
+
