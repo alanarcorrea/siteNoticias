@@ -13,17 +13,21 @@ require_once "conexao.php";
     
     <hr>
     
-    <form method="post" action="send-email.php">
+    <form method="post" action="send-email.php" enctype="multipart/form-data">
         <h3> Clientes </h3>
         <?php  
             $sql = "SELECT * FROM clients";
             $records = mysqli_query($conn, $sql);
+            $contador = 1;
             while($clients=mysqli_fetch_assoc($records)) {  ?>
                 <div class="form-group">
                     <p>
-                        <input type="checkbox" name="email[]" value="on"><?= $clients['email'] ?>
+                        <input type="checkbox" class="email" name="<?= 'email' . $contador ?>" value="on">
+                        <span><?= $clients['email'] ?></span>
                     </p>
                 </div>
+
+                <?php $contador += 1; ?> 
         <?php } ?>  
 
         <h3> Notícias</h3>
@@ -34,7 +38,8 @@ require_once "conexao.php";
             while($news=mysqli_fetch_assoc($records)) {  ?>
                 <div class="form-group">
                     <p>
-                        <input type="checkbox" name="title[]" value="on"><?= $news['title'] ?>
+                        <input type="checkbox" class="new" name="news[]" value="<?= $news['title'] ?>">
+                        <span><?= $news['title'] ?></span>
                     </p>
                 </div>
         <?php } ?>  
@@ -46,8 +51,8 @@ require_once "conexao.php";
 </div>
 
 
-
-
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>
 

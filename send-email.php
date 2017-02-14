@@ -1,12 +1,16 @@
 <?php
 
-//$name = $_POST["name"];
-$email = $_POST["email"];
-//$message = $_POST["message"];
-$title = $_POST["title"];
+
+$teste = array($_POST['news[]']);
+echo $teste;
 
 
-require 'phpmailer/PHPMailerAutoload.php';
+
+
+
+
+
+/*require 'phpmailer/PHPMailerAutoload.php';
 
 $mail = new PHPMailer();
 $mail -> setLanguage ('pt');
@@ -62,6 +66,5 @@ if($send)
 	echo 'Email enviado com sucesso';
 else
 	echo 'Erro: '.$mail->ErrorInfo;
-
+*/
 ?>
-

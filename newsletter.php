@@ -5,7 +5,8 @@
 <html>
 <head>
 <title>Teste PHP - Email marketing</title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" >
+<meta charset="utf-8">
 
 </head>
 	
